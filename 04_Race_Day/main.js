@@ -1,6 +1,5 @@
 let raceNumber = Math.floor(Math.random() * 1000);
 
-
 const registeredEarly = true;
 const age = 18;
 
