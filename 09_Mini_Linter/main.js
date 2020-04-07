@@ -3,3 +3,53 @@ let story = 'Last weekend, I took literally the most beautiful bike ride of my l
 let overusedWords = ['really', 'very', 'basically'];
 
 let unnecessaryWords = ['extremely', 'literally', 'actually' ];
+
+// Split the string into individual words and save them in a new array.
+const storyWords = story.split(' ');
+
+// Filter out unnecessary words.
+let betterWords = storyWords.filter(word => {
+  return !unnecessaryWords.includes(word);
+})
+
+// Count how many times the overused words are used. 
+let reallyCount = 0;
+let veryCount = 0;
+let basicallyCount = 0;
+
+for (word of storyWords) {
+  if (word === 'really') {
+    reallyCount++;
+  } else if (word === 'very') {
+    veryCount++;
+  } else if (word === 'basically') {
+    basicallyCount++;
+  }
+}
+
+// Count how many sentences are in the paragraph.
+let sentenceCount = 0;
+
+for (word of storyWords) {
+  if (word[word.length-1] === '.' || word[word.length-1] === '!') {
+    sentenceCount++;
+  }
+};
+
+// Count how many sentences are in the paragraph. (Alternative way)
+
+let sentenceCount2 = 0;
+
+storyWords.forEach(word => {
+  if (word[word.length-1] === '.' || word[word.length-1] === '!') {
+    sentenceCount2++;
+  }
+});
+
+// Log some important information about the user's work.
+console.log(`The word count: ${storyWords.length}`);
+console.log(`The sentence count: ${sentenceCount}`);
+console.log(`The overused word \'really\' count: ${reallyCount}`);
+console.log(`The overused word \'very\' count: ${veryCount}`);
+console.log(`The overused word \'basically\' count: ${basicallyCount}`);
+console.log(betterWords.join(' '));
