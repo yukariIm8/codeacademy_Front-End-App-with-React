@@ -1,4 +1,4 @@
-// Attach the each function as a property to MessageMixer object.
+// Save each of the functions to a variable.
 const countCharacter = function(inputString, inputCharacter) {
   let count = 0;
   let string = inputString.toLowerCase();
@@ -59,5 +59,7 @@ const pigLatin = function(sentence, character) {
   return sentence.split(' ').join(character + ' ');
 }
 
-// Export each of the function by theri variable names.
-export { countCharacter, capitalizeFirstCharacterOfWords, reverseWord, reverseAllWords, replaceFirstOccurence, replaceAllOccurrences, encode, palindrome, pigLatin };
+// Export each of the functions by the variable name.
+export { countCharacter, capitalizeFirstCharacterOfWords,
+  reverseWord, reverseAllWords, replaceFirstOccurence,
+  replaceAllOccurrences, encode, palindrome, pigLatin };
