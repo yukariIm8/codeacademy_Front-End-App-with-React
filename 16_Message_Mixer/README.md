@@ -5,6 +5,7 @@ Message Mixer
 This program performs an action on input text and display the output of that behavior to the console.
 The main task is to turn a single JavaScript file into JavaScript modules. 
 
+The program can do the following tasks.
 - count the characters in a message
 - capitalize the first character of words
 - reverse a message’s words in place
