@@ -1,0 +1,4 @@
+// Preset my local project's config to "env."
+{
+    "presets": ["env"]
+  }
